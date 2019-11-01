@@ -14,6 +14,31 @@ computer=choices[randint(0,2)]
 # set up a game loop here so we don't have to keep restarting
 player= False
 
+def winorlose(status):
+	print("called win or lose", status, "\n")
+	print("You", status, "! Would you like to play again? \n")
+	choice = input("Y / N?")
+
+	if choice == "Y" or choice =="y":
+		global player_lives
+		global computer_lives
+		global player
+		global computer 
+		# reset the game and start all over again
+		player_lives = 5
+		computer_lives = 5
+		player = False
+		computer = choices [randint(0, 2)]
+		
+	elif choice == "N" or choice == "n":
+		print("You chose to quit. Better luck next time!")
+		exit()
+	else:
+		print("Make a valid choice. Yes or no!")
+
+
+
+
 while player is False:
 	print("====================================")
 	print("Computer Lives:", computer_lives, "/5")
@@ -59,39 +84,41 @@ while player is False:
 			computer_lives = computer_lives -1
 
 	if player_lives is 0:
-		print("You lost! Loser. Would you like to play again?")
-		choice = input("Y / N?")
+		winorlose("lose")
+		# print("You lost! Loser. Would you like to play again?")
+		# choice = input("Y / N?")
 
-		if choice == "Y" or choice =="y":
-			# reset the game and start all over again
-			player_lives = 5
-			computer_lives = 5
-			player = False
-			computer = choices [randint(0, 2)]
+		# if choice == "Y" or choice =="y":
+		# 	# reset the game and start all over again
+		# 	player_lives = 5
+		# 	computer_lives = 5
+		# 	player = False
+		# 	computer = choices [randint(0, 2)]
 		
-		elif choice == "N" or choice == "n":
-			print("You chose to quit. Better luck next time!")
-			exit()
-		else:
-			print("Make a vlide choice. Yes or no!")
+		# elif choice == "N" or choice == "n":
+		# 	print("You chose to quit. Better luck next time!")
+		# 	exit()
+		# else:
+		# 	print("Make a vlide choice. Yes or no!")
 
 	elif computer_lives is 0:
-		print("You won! Would you like to play again?")
-		choice = input("Y / N?")
+		winorlose("won")
+		# print("You won! Would you like to play again?")
+		# choice = input("Y / N?")
 
-		if choice == "Y" or choice =="y":
-			# reset the game and start all over again
-			player_lives = 5
-			computer_lives = 5
-			player = False
-			computer = choices [randint(0, 2)]
+		# if choice == "Y" or choice =="y":
+		# 	# reset the game and start all over again
+		# 	player_lives = 5
+		# 	computer_lives = 5
+		# 	player = False
+		# 	computer = choices [randint(0, 2)]
 		
-		elif choice == "N" or choice == "n":
-			print("You chose to quit. Better luck next time!")
-			exit()
-		else:
-			print("Make a vlide choice. Yes or no!")
-			# choice = input("Y/N?")
+		# elif choice == "N" or choice == "n":
+		# 	print("You chose to quit. Better luck next time!")
+		# 	exit()
+		# else:
+		# 	print("Make a valid choice. Yes or no!")
+		# 	# choice = input("Y/N?")
 
 
 	player = False
