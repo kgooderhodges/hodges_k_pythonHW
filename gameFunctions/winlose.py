@@ -4,6 +4,7 @@ from gameFunctions import gameVars, compare
 def winorlose(status):
 	print(status, "\n")
 	print("You", status)
+	print("----------")
 	print("Computer wants to play again, do YOU? \n")
 	choice = input("Y / N?")
 
@@ -15,9 +16,11 @@ def winorlose(status):
 		gameVars.computer = gameVars.choices [randint(0, 2)]
 		
 	elif choice == "N" or choice == "n":
+		print("----------")
 		print("You choose to quit? Alright then, quitter!")
 		exit()
 	else:
+		print("----------")
 		print("Come on! You know the drill. Yes or no!")
 		# recursion function -> calling a function from inside itself
 		winorlose(status)
