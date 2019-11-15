@@ -4,7 +4,7 @@
 
 Pick your weapon and play against the computer - you'll only get a virtual sting if you lose!
 
-<img src="images/rock_paper_scissors_img.jpg">
+<img src="images/rock_paper_scissors_img.jpg" alt="paper covers rock, rock beats scissors, scissors cut paper, game rules">
 
 The rules are the same as the classic gamne:
 1. Paper covers Rock

@@ -1,12 +1,9 @@
 from gameFunctions import gameVars
 
-# need a function to run to compare the choices
-# # figure out wat to pass into the function - hint => what are you comparing?
 def compare(player):
 	
 	if player == gameVars.computer:
-		#we have a tie, no point going any further
-		print("tie, no one wins! try again")
+		print("----- TIE, no one wins! Try again -----")
 
 	elif player =="quit":
 		print("you chose to quit, quitter.")
@@ -14,9 +11,9 @@ def compare(player):
 
 	elif player == "Rock": 
 		if gameVars.computer == "Paper":
-			print("************************************")
+			print("------------------------------------")
 			print("BOO! You lose!", gameVars.computer, "covers", player)
-			print("************************************")
+			print("------------------------------------")
 			gameVars.player_lives = gameVars.player_lives -1
 		else:
 			print("************************************")
@@ -26,9 +23,9 @@ def compare(player):
 
 	elif player == "Paper": 
 		if gameVars.computer == "Scissors":
-			print("************************************")
+			print("------------------------------------")
 			print("BOO! You lose!", gameVars.computer, "cuts", player)
-			print("************************************")
+			print("------------------------------------")
 			gameVars.player_lives = gameVars.player_lives -1
 		else:
 			print("************************************")
@@ -38,12 +35,12 @@ def compare(player):
 
 	elif player == "Scissors": 
 		if gameVars.computer == "Rock":
-			print("************************************")
+			print("------------------------------------")
 			print("BOO! You lose!", gameVars.computer, "smashes", player)
-			print("************************************")
+			print("------------------------------------")
 			gameVars.player_lives = gameVars.player_lives -1
 		else:
 			print("************************************")
-			print("YAY! !", player, "cuts", gameVars.computer)
+			print("YAY! Winning!", player, "cuts", gameVars.computer)
 			print("************************************")
 			gameVars.computer_lives = gameVars.computer_lives -1 
