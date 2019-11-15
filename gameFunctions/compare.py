@@ -12,26 +12,38 @@ def compare(player):
 		print("you chose to quit, quitter.")
 		exit()
 
-	elif player == "rock": 
-		if gameVars.computer == "paper":
-			print("You lose!", gameVars.computer, "covers", player, "\n")
+	elif player == "Rock": 
+		if gameVars.computer == "Paper":
+			print("************************************")
+			print("BOO! You lose!", gameVars.computer, "covers", player)
+			print("************************************")
 			gameVars.player_lives = gameVars.player_lives -1
 		else:
-			print("You won!", player, "smashes", gameVars.computer, "\n")
+			print("************************************")
+			print("YAY! Winning!", player, "smashes", gameVars.computer)
+			print("************************************")
 			gameVars.computer_lives = gameVars.computer_lives -1
 
-	elif player == "paper": 
-		if gameVars.computer == "scissors":
-			print("You lose!", gameVars.computer, "cuts", player, "\n")
+	elif player == "Paper": 
+		if gameVars.computer == "Scissors":
+			print("************************************")
+			print("BOO! You lose!", gameVars.computer, "cuts", player)
+			print("************************************")
 			gameVars.player_lives = gameVars.player_lives -1
 		else:
-			print("You won!", player, "covers", gameVars.computer, "\n")
+			print("************************************")
+			print("YAY! Winning!", player, "covers", gameVars.computer)
+			print("************************************")
 			gameVars.computer_lives = gameVars.computer_lives -1
 
-	elif player == "scissors": 
-		if gameVars.computer == "rock":
-			print("You lose!", gameVars.computer, "smashes", player, "\n")
+	elif player == "Scissors": 
+		if gameVars.computer == "Rock":
+			print("************************************")
+			print("BOO! You lose!", gameVars.computer, "smashes", player)
+			print("************************************")
 			gameVars.player_lives = gameVars.player_lives -1
 		else:
-			print("You won!", player, "cuts", gameVars.computer, "\n")
-			gameVars.computer_lives = gameVars.computer_lives -1
+			print("************************************")
+			print("YAY! !", player, "cuts", gameVars.computer)
+			print("************************************")
+			gameVars.computer_lives = gameVars.computer_lives -1 

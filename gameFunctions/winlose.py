@@ -2,8 +2,9 @@ from random import randint
 from gameFunctions import gameVars, compare
 
 def winorlose(status):
-	print("called win or lose", status, "\n")
-	print("You", status, "! Would you like to play again? \n")
+	print(status, "\n")
+	print("You", status)
+	print("Computer wants to play again, do YOU? \n")
 	choice = input("Y / N?")
 
 	if choice == "Y" or choice =="y":
@@ -14,9 +15,9 @@ def winorlose(status):
 		gameVars.computer = gameVars.choices [randint(0, 2)]
 		
 	elif choice == "N" or choice == "n":
-		print("You chose to quit. Better luck next time!")
+		print("You choose to quit? Alright then, quitter!")
 		exit()
 	else:
-		print("Make a valid choice. Yes or no!")
+		print("Come on! You know the drill. Yes or no!")
 		# recursion function -> calling a function from inside itself
 		winorlose(status)
